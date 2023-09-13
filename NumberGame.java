@@ -5,8 +5,8 @@ public class NumberGame{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
-        int min = 1, max = 1000, guess, attempt = 5 , randomNumber = random.nextInt(max-min+1)+min;
-        System.out.print("Enter Your Guess, You have "+attempt+" attempts left :");
+        int min = 1, max = 100, guess, attempt = 5 , randomNumber = random.nextInt(max-min+1)+min;
+        System.out.print("Enter Your Guess B/w 1 - 100, You have "+attempt+" attempts left :");
         guess = sc.nextInt();
         while(guess != randomNumber && attempt > 1){
             if(guess > randomNumber){
@@ -16,7 +16,7 @@ public class NumberGame{
 
             }
             attempt--;
-            System.out.print("Enter Your Guess, You have "+attempt+" attempts left :");
+            System.out.print("Enter Your Guess B/w 1 - 100, You have "+attempt+" attempts left :");
             guess = sc.nextInt();
         }
         if(guess == randomNumber){
